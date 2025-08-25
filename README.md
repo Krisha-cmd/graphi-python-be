@@ -2,6 +2,11 @@
 
 This Azure Functions project is organized using a modular architecture to maintain code organization, reusability, and scalability.
 
+## 📋 Documentation
+
+- **[Main Documentation](#)** - This file (project setup, modules, coding guidelines)
+- **[Branching Strategy](BRANCHING_STRATEGY.md)** - Repository management, branch conventions, and workflow
+
 ## Project Structure
 
 ```
@@ -249,6 +254,31 @@ azure-functions
 
 
 
+## Git Workflow
+
+This project follows a dual-repository strategy with specific branching conventions. **Please read the [Branching Strategy](BRANCHING_STRATEGY.md) document** for complete details.
+
+### Quick Start
+1. **Development Repository**: Azure repository (organization access required)
+2. **Branch Convention**: `{YourInitials}/{UserStoryNumber}` (e.g., `NA/1234`)
+3. **Workflow**: Feature branch → Code Review → Main → Release
+4. **GitHub Repository**: Read-only mirror, no direct contributions
+
+### Essential Commands
+```bash
+# Start new feature
+git checkout main && git pull origin main
+git checkout -b {YourInitials}/{StoryNumber}
+
+# Daily development
+git add . && git commit -m "feat(module): description"
+git push origin {YourInitials}/{StoryNumber}
+
+# After PR approval
+git checkout main && git pull origin main
+git branch -d {YourInitials}/{StoryNumber}
+```
+
 ## Deployment
 
 ### Azure Deployment
@@ -262,4 +292,4 @@ azure-functions
 
 ---
 
-For questions or contributions, please follow the established patterns and naming conventions outlined in this README.
+For questions or contributions, please follow the established patterns and naming conventions outlined in this README and the [Branching Strategy](BRANCHING_STRATEGY.md) document.
