@@ -11,7 +11,7 @@ logger = get_logger('CiteFunctions.Routes')
 
 def register_routes(app: func.FunctionApp):
     """
-    Register all CiteFunctions routes with the main app
+    Register all CiteFunctions routes with the main app.
     
     Args:
         app: The main Azure Functions app instance
